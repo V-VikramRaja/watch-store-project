@@ -1,0 +1,54 @@
+<% layout("layouts/boilerplate") %> 
+    <h1>Add a products</h1>
+
+    <form action="/products" method="post" >
+        <div>
+            <label for="brand">Brand</label>
+            <input type="text" name="product[brand]" id="model" ><br>
+        </div>
+
+        <div>
+            <label for="model">Model</label>
+            <input type="text" name="product[model]" id="model" ><br>
+        </div>
+
+        <div>
+            <label for="price">Price</label>
+            <input type="number" name="product[price]" id="price" ><br>
+        </div>
+        
+        <div>
+            <label for="color">Color</label>
+            <input type="text" name="product[color]" id="color" ><br>
+        </div>
+   
+
+        <div>
+            <label for="description">Description</label>
+            <textarea name="product[description]" id="description" cols="30" rows="10"></textarea><br>
+        </div>
+
+        <div>
+            <label for="image">Image Link:</label>
+            <input type="string" name="product[image]" id="image" ><br>
+        </div>   
+
+        <div>
+            <label for="gender">Gender</label>
+            <input type="string" name="product[gender]" id="image" ><br>
+        </div>
+
+        <div>
+            <label for="warranty">Warranty in months</label>
+            <input type="number" name="product[warranty]" id="warranty" ><br>
+        </div>
+
+        <div>
+            <label for="stocks">Stocks available</label>
+            <input type="number" name="product[stocks]" id="stocks" >
+        </div>
+        
+        <button type="submit">Submit</button>
+
+    </form>
+    <a href="/products">Back</a>

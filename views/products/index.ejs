@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="css/index.css">
+<% layout("layouts/boilerplate") %> 
+ 
+
+    <div class="index-product-container">
+        <div class="index-product-filters">
+                <p class="index-product-filter-items">Men's Collections</p>
+                <p class="index-product-filter-items">Women's Collections</p>
+                <p class="index-product-filter-items">Kid's Collections</p>
+                <p class="index-product-filter-items">Couple's Collections</p>
+                <p class="index-product-filter-items">Sportswear</p>
+                <p class="index-product-filter-items">Dailywear</p>
+                <p class="index-product-filter-items">Partywear</p>
+                <p class="index-product-filter-items">Classicwear</p>
+                <p class="index-product-filter-items">Smart Watches</p>
+        </div>
+        <div class="index-product-carts-container">
+        <% for(let item of products ){ %> 
+                <div class="index-product-cards">
+                        <img class="product-img" src="<%=item.image%> " alt="watch image">
+                        <div class="index-title-wrapper">
+                                <a href="/products/<%= item._id %>" target="1">
+                                        <h3><%= item.brand %>-<%= item.model %> <li><%= item.rating %> </li></h3>
+                                </a>
+                        </div>
+                        <li>Rs:<%= item.price %> </li>
+                        <p><%= item.description %> </p>
+                </div>
+        
+        <% } %> 
+        </div>
+</div>

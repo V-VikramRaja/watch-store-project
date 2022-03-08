@@ -1,0 +1,156 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="css/stars.css" />
+<link rel="stylesheet" href="css/show.css" />
+<div class="show-page">
+<section class="show-section1">
+
+      <div class="phase1">
+        <img src="<%= product.image %> " alt="" />
+      </div>
+
+
+      <div class="phase2">
+        <h4 class="show-phase2" >Sold by: <%= product.author.username %></h4>
+        <h1 class="show-phase2" ><%= product.brand %> <%= product.model %></h1>
+        <li class="show-phase2" >Price: <%= product.price %>Rs <del><%= product.price + 3999 %> </del></li>
+        <div class="show-phase2" >
+          <!-- counting total number of reviews -->
+          <% let total = 0 %> 
+          <% let totalReviews = 0 %> 
+          <% for(let review of product.reviews){ %> 
+            <%total += review.rating %> 
+            <% totalReviews += 1 %> 
+          <% } %> 
+          <p class="starability-result" data-rating="<%= total/totalReviews %>">
+              Rated: <%= total/totalReviews %> stars
+          </p>
+        </div>
+        
+        <li class="show-phase2" >Color: <%= product.color %></li>
+        <h5 class="show-phase2" ><%= product.description %></h5>
+        <% if(product.stocks > 500){ %>
+        <h4 class="show-phase2" >In Stock</h4>
+        <% }else{ %>
+        <h4 class="show-phase2" >Only <%= product.stocks %> units available</h4>
+        <% } %>
+        <h5 class="show-phase2" >For: <%= product.gender %></h5>
+      </div>
+
+      <div class="phase3">
+        <h2>Price:<%= product.price %>Rs</h2>
+
+        <div class="buynow">
+          <h3>BUY NOW</h3>
+        </div>
+
+        <div class="add-to-cart">
+          <h3>ADD TO CART</h3>
+        </div>
+
+
+
+        <div class="phase2-tag">
+          <p>Pay On Delivery Available</p>
+          <p>10 Days Replacement</p>
+          <p>Warranty: <%= product.warranty %>Months</p>
+        </div>
+
+      </div>
+
+      <a href="/products">Back</a>
+      <% if(currentUser && currentUser.isAdmin) { %>
+      <a href="/products/<%= product._id %>/edit ">Edit</a>
+
+      <form action="/products/<%= product._id %>?_method=DELETE" method="post">
+        <button>Delete</button>
+      </form>
+      <% } %>
+    
+    </section>
+    <div class="review_section">
+      <h4>Add a review</h4>
+      <form action="/products/<%= product._id %>/reviews" method="post">
+        <div class="rating-stars">
+          <fieldset class="starability-basic">
+            <input
+              type="radio"
+              id="no-rate"
+              class="input-no-rate"
+              name="review[rating]"
+              value="1"
+              checked
+              aria-label="rating."
+            />
+            <input
+              type="radio"
+              id="first-rate1"
+              name="review[rating]"
+              value="1"
+            />
+            <label for="first-rate1" title="Terrible">1 star</label>
+            <input
+              type="radio"
+              id="first-rate2"
+              name="review[rating]"
+              value="2"
+            />
+            <label for="first-rate2" title="Not good">2 stars</label>
+            <input
+              type="radio"
+              id="first-rate3"
+              name="review[rating]"
+              value="3"
+            />
+            <label for="first-rate3" title="Average">3 stars</label>
+            <input
+              type="radio"
+              id="first-rate4"
+              name="review[rating]"
+              value="4"
+            />
+            <label for="first-rate4" title="Very good">4 stars</label>
+            <input
+              type="radio"
+              id="first-rate5"
+              name="review[rating]"
+              value="5"
+            />
+            <label for="first-rate5" title="Amazing">5 stars</label>
+          </fieldset>
+        </div>
+
+        <div class="add-review">
+          <label for="body">Review</label><br />
+          <textarea
+            class="form-control"
+            name="review[body]"
+            id="review"
+            cols="30"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div class="show-reviews">
+        <h2>Reviews</h2>
+        <% for(let review of product.reviews){ %>
+        <h3>by <%= review.author.username %></h3>
+        <p class="starability-result" data-rating="<%= review.rating %>">
+          Rated: <%= review.rating %> stars
+        </p>
+        <h5><%= review.body %></h5>
+
+        <% if(currentUser && currentUser.equals(review.author)) { %>
+        <form
+          action="/products/<%= product._id %>/reviews/<%=review._id%>?_method=DELETE"
+          method="post">
+          <button>delete</button>
+        </form>
+        <% } %> <% } %>
+      </div>
+      </div>
+    
+</section>
+</div>

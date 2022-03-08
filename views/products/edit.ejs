@@ -1,0 +1,44 @@
+<% layout("layouts/boilerplate") %> 
+    <h1>Add a new product</h1>
+    <form action="/products/<%= product._id %>?_method=PUT " method="post">
+
+        <label for="brand">Brand</label>
+        <select name="product[brand]" id="brand" required>
+            <% for(let i = 0;i<(avails.brand).length;i++){ %>  
+                <option value="<%= avails.brand[i] %>" <%= product.brand===avails.brand[i]? 'selected':'' %> ><%= avails.brand[i] %></option>
+            <% } %> 
+        </select><br>
+
+        <label for="model">Model</label>
+        <input type="text" name="product[model]" id="model" value="<%= product.model %> " required><br>
+
+        <label for="price">Price</label>
+        <input type="number" name="product[price]" id="price" value="<%= product.price %>"required><br>
+
+        <label for="color">Color</label>
+        <input type="text" name="product[color]" id="color" value="<%= product.color %> "required><br>
+
+
+        <label for="description">Description</label>
+        <textarea name="product[description]" id="description" cols="30" rows="10" value="<%= product.description %> "><%= product.description %></textarea><br>
+
+        <label for="image">Image</label>
+        <input type="string" name="product[image]" id="image" value="<%= product.image %> "required><br>
+
+
+        <label for="gender">Gender</label>
+        <select name="product[gender]" id="gender">
+            <% for(let i = 0;i<(avails.gender).length;i++){ %>  
+                <option value="<%= avails.gender[i] %>" <%= product.gender===avails.gender[i]? 'selected':'' %>><%= avails.gender[i] %></option>
+            <% } %> 
+        </select><br>
+
+        <label for="warranty">Warranty in months</label>
+        <input type="number" name="product[warranty]" id="warranty" value="<%= product.warranty %>"required><br>
+
+        <label for="stocks">Stocks available</label>
+        <input type="number" name="product[stocks]" id="stocks" value="<%= product.stocks %>"required>
+        
+        <button type="submit">Submit</button>
+
+    </form>

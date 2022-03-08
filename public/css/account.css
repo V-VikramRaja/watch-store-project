@@ -1,0 +1,149 @@
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.auth .auth-wrapper {
+  background-color: #F9E8F9;
+  margin-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+  height: 40vh;
+  width: 40rem;
+  border-radius: 20px;
+}
+
+.auth .auth-wrapper .login-wrapper {
+  border-radius: 20px;
+  background-color: #78227B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.auth .auth-wrapper .login-wrapper .wb {
+  font-size: 1.5em;
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  padding-bottom: 25px;
+  color: white;
+}
+
+.auth .auth-wrapper .login-wrapper .auth-text-content {
+  color: lightgray;
+  padding-bottom: 15px;
+}
+
+.auth .auth-wrapper .login-wrapper .l-s {
+  font-family: 'Open Sans';
+  color: lightgray;
+  padding-bottom: 15px;
+}
+
+.auth .auth-wrapper .login-wrapper .login-btn {
+  border: 2px solid lightgray;
+  margin-top: 25px;
+  border-radius: 40px;
+  padding: .3rem 2rem .3rem 2rem;
+}
+
+.auth .auth-wrapper .login-wrapper .login-btn a {
+  color: lightgray;
+  font-size: 15px;
+}
+
+.auth .auth-wrapper .login-wrapper .login-btn:hover {
+  background-color: lightgray;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.auth .auth-wrapper .login-wrapper .login-btn:hover a {
+  font-weight: 550;
+  color: #78227B;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.auth .auth-wrapper .register-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.auth .auth-wrapper .register-wrapper .wb {
+  font-size: 1.5em;
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  padding-bottom: 25px;
+  color: #78227B;
+}
+
+.auth .auth-wrapper .register-wrapper .auth-text-content {
+  color: #814483;
+  padding-bottom: 15px;
+}
+
+.auth .auth-wrapper .register-wrapper .register-btn {
+  border: 2px solid #78227B;
+  margin-top: 25px;
+  border-radius: 40px;
+  padding: .3rem 2rem .3rem 2rem;
+}
+
+.auth .auth-wrapper .register-wrapper .register-btn a {
+  color: #78227B;
+  font-size: 15px;
+}
+
+.auth .auth-wrapper .register-wrapper .register-btn:hover {
+  background-color: #78227B;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.auth .auth-wrapper .register-wrapper .register-btn:hover a {
+  font-weight: 550;
+  color: white;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+/*# sourceMappingURL=account.css.map */

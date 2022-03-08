@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/css/register.css">
+<div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+    <h1>Register</h1>
+</div>
+<div class="formbg-outer">
+    <div class="formbg">
+    <div class="formbg-inner padding-horizontal--48">
+        <span class="padding-bottom--15">Create Your Account</span>
+        <form id="stripe-login" aaction="/register" method="post" class="register-form">
+        <div class="field padding-bottom--24">
+            <label for="usernames">Username</label>
+            <input type="username" name="username" required>
+        </div>
+        <div class="field padding-bottom--24">
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="field padding-bottom--24">
+            <div class="grid--50-50">
+            <label for="password">Password</label>
+            </div>
+            <input type="password" name="password" required>
+        </div>
+        <% if(currentUser && currentUser.isAdmin) {%> 
+          <div class="register-make-admin" >
+            <label class="register-make-admin-label" for="isAdmin">Make Admin</label>
+            <input type="checkbox" name="isAdmin" value="true" placeholder="" />
+          </div>
+          <% } %> 
+        <div class="field padding-bottom--24">
+            <input type="submit" name="submit" value="Continue">
+        </div>
+        </form>
+    </div>
+</div>

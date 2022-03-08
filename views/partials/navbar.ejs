@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="css/navbar.css" />
+<nav class="navbar top-nav">
+  <div class="top-nav-logo">
+    <img src="images/spic-logo.png" alt="company-name"class="logo-img" />
+  </div>
+
+  
+    <% if(currentUser && currentUser.isAdmin) { %> 
+      <div class="admin-panel-link-wrapper">
+        <a class="admin-panel-link" href="/admin-panel">Admin Panel</a>
+      </div>
+    <% } %>
+  
+
+  <div class="auth-img">
+    <a href="/auth">
+      <img src="images/account-circle.png" alt="accounts">
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+<% layout("layouts/boilerplate") %> 
+<link rel="stylesheet" href="/css/account.css">
+<div class="auth">
+    <% if(!currentUser){ %>
+    <div class="auth-wrapper">
+        <div class="login-wrapper">
+            <div class="wb">Welcome Back</div>
+            <div class="auth-text-content">To keep connected please </div>
+            <div class="l-s">login/signup</div>
+            <div class="login-btn"><a class="login" href="/login">login</a></div>
+        </div>
+        <div class="register-wrapper">
+            <div class="wb">Create Account</div>
+            <div class="auth-text-content">Join with us NOW!!!</div>
+            <div class="register-btn"><a class="register" href="/register">Register</a></div>
+        </div>
+    </div>
+    <% }else{ %>
+    <a class="logout" href="/logout">logout</a>
+    <% } %>
+</div>

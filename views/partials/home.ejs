@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIC WATCH STORE</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <section id="home-hero">
+        <nav class="home-top-nav">
+            <div class="logo">
+                <img src="images/spic-logo.png" alt="">
+            </div>
+
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <% if(currentUser && currentUser.isAdmin) { %>
+                    <li><a href="/products/new">Add Product</a></li>
+                    <% } %>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+
+                <div class="accounts">
+                    <a href="/auth"><img src="images/account-circle.png" alt="accounts"></a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-body">
+            <div class="hero-right">
+                <img class="asset-img" src="images/home-hero-assest1.png" alt="home">
+
+                <div class="hero-right-down">
+                    <div class="hero-right-down-left">
+                        <div class="hero-company-name">The SPIC Company</div>
+                        <p class="slogan"> Don't be average <br> Let the be SPIC </p>
+                        <div class="hero-shop-now"><a href="/products">Shop Now</a></div>
+                    </div>
+
+                    <div class="hero-right-down-right">
+                        <img class="social-logo" src="images/Icon metro-facebook.png" alt="home">
+                        <img class="social-logo" src="images/Icon feather-instagram.png" alt="home">
+                        <img class="social-logo" src="images/Icon awesome-twitter.png" alt="home">
+                        <img class="social-logo" src="images/Icon ionic-ios-mail.png" alt="home">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+
+    <section id="men">
+        <div class="left">
+            <div class="men-heading">
+                <a href="">MEN</a>
+            </div>
+            <div class="men-content1">
+                <div class="men-content-shape">
+
+                </div>
+                <div class="men-content-text">
+                    <p >Sleek and contemporary timepieces</p>
+                    <p >Perfect accessory for professionals</p>
+                    <p >Crafted Urban Designs</p>
+                </div>
+                
+            </div>
+            <div class="men-content2">
+                    <p>Cognizant of the latest trends in design, the Workwear collection offers timepieces crafted in elegant designs, superior aesthetic appeal and supreme comfort. </p>
+                    <p>Designed with genuine leather and metal straps, the watches are the perfect accessory to pair with formal and semi-casual attire. Sizes that win you prises</p>
+            </div>
+            <div class="more1">
+                <p>More   ></p>
+            </div>
+        </div>
+        <div class="right">
+        </div>
+    </section>
+
+
+    <section id="women">
+        <div class="left">
+            
+        </div>
+        <div class="right">
+            <div class="women-heading">
+                <h1>WOMEN</h1>
+            </div>
+
+            <div class="women-content">
+                <p>Intricately detailed and stylish, this analog watch from Titan's Karishma Revive collection is specially made for the urban woman. Studded with a Swarovski crystal at the 12th-hour marker, the silver oval dial protected by a mineral </p>
+                <p>glass flaunts plain three hands that facilitates reading ease. Crafted from high-quality stainless steel, the strap flaunts a sparkling shade of silver that add to its look. To complete your look for the day, it can be teamed with a black dress.</p>
+            </div>
+
+            <div class="more2">
+                <p>More   ></p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section id="kids">
+        <div class="left">
+            <div class="kids-heading">
+                <h1>KIDS</h1>
+            </div>
+
+            <div class="kids-content">
+                <p>Founded by people looking to be different</p>
+                <p>Designed with a vision to be asthetic</p>
+                <p>Ideology of grace with an edge of personal touch</p>
+            </div>
+
+            <div class="more1">
+                <p>More   ></p>
+            </div>
+        </div>
+        <div class="right">
+
+        </div>
+        
+
+    </section>
+
+    <section id="about">
+        <div class="about-heading">
+            <h1>Innovation With Quality</h1>
+            <div class="h-b">
+
+            </div>
+        </div>
+
+
+        <div class="about-content">
+            <div class="about-content-main">
+                <p>SPIC  commenced its operations in 1984 under the name Stone Pic Watches Limited. Over the last three decades, SPIC has expanded into underpenetrated markets and created lifestyle brands across different product categories.</p>
+            </div>
+            <div class="about-content-main">
+                <p>We will do this through a spirit and a caring, value-driven culture that fosters innovation, drives performance and ensures the highest global standards in everything we do.</p>
+            </div>
+            <div class="about-content-main">
+                <p>SPIC  commenced its operations in 1984 under the name Stone Pic Watches Limited. Over the last three decades, SPIC has expanded into underpenetrated markets and created lifestyle brands across different product categories.</p>
+            </div>
+            <div class="about-content-main">
+                <p>We create elevating experiences for the people we touch and significantly impact the world we work in.</p>
+            </div>
+        </div>
+
+        <div class="more1">
+            <a href="/products">All Products ></a>
+        </div>
+    </section>
+
+
+    <footer id="footer" role="contentinfo">
+        <div class="footer-branding logo footer-main">
+            <img src="images/spic watch logo white.png" alt="logo image">
+            <p>Stone Pic Private Limited Since 2002</p>
+        </div>
+        <div class="footer-links-container footer-main">
+            <div class="footer-link1 footer-link">
+                    <ul>
+                        <h3><a>Follow Us</a></h3>
+                        <li><a>Facebook</a></li>
+                        <li><a>Instagram</a></li>
+                        <li><a>Email</a></li>
+                        <li><a>Pintrest</a></li>
+                    </ul>
+            </div>
+            <div class="footer-link2 footer-link">
+                    <ul>
+                        <h3><a href="/products" >Collections</a></h3>
+                        <li><a href="#men">Men</a></li>
+                        <li><a href="#women">Women</a></li>
+                        <li><a href="#kids">Kids</a></li>
+                        <li><a href="/products">All Products</a></li>
+                    </ul>
+            </div>
+            <div class="footer-link3 footer-link">
+                    <ul>
+                        <h3><a href="#about">About us</a></h3>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Stores</a></li>
+                        <li><a href="#">Costumer Care</a></li>
+                    </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

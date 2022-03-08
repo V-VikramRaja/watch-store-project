@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="css/navbar2.css" />
+<nav>
+  <div class="med-nav">
+    <div class="company-name">The Spic Company</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <% if(currentUser && currentUser.isAdmin) { %>
+      <li><a href="/products/new">Add Product</a></li>
+      <% } %>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </div>
+</nav>
