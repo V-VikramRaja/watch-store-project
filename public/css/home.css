@@ -21,6 +21,10 @@ li {
   display: none;
 }
 
+.mail {
+  opacity: .2;
+}
+
 #home-hero {
   height: 100vh;
   background-image: url("../images/hero-bg-edited.jpg");
